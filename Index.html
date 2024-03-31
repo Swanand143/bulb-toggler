@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 26</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #d6d6d6;
+        padding: 20px;
+      }
+      .container{
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+        border: #333 solid 1px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+      }
+      h2 {
+        color: teal;
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px #ccc;
+      }
+
+      img {
+        max-width: 150px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+      }
+
+      button {
+        display: block;
+        margin: 10px auto;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #4d4d4d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Bulb On/Off Toggler</h2>
+      <img id="bulbImage" src="pic_bulboff.gif" alt="Bulb Off" />
+      <button onclick="toggleBulb('on')">Bulb ON</button>
+      <button onclick="toggleBulb('off')">Bulb OFF</button>
+    </div>
+    <script>
+      function toggleBulb(toggle) {
+        const bulbElement = document.getElementById("bulbImage");
+        bulbElement.src = `pic_bulb${toggle}.gif`;
+      }
+    </script>
+  </body>
+</html>
